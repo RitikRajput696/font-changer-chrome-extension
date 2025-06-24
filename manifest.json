@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Font Changer",
+  "version": "1.0",
+  "description": "Change webpage fonts using Google Fonts",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Font Changer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

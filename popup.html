@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        width: 300px;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .font-selector {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      button {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .apply-btn {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .apply-btn:hover {
+        background-color: #45a049;
+      }
+
+      .reset-btn {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .reset-btn:hover {
+        background-color: #da190b;
+      }
+
+      .preview {
+        margin-top: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        min-height: 40px;
+      }
+
+      .status {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Font Changer</h2>
+    </div>
+
+    <div class="font-selector">
+      <label for="fontSelect">Choose Google Font:</label>
+      <select id="fontSelect">
+        <option value="">Select a font...</option>
+        <option value="Roboto">Roboto</option>
+        <option value="Open Sans">Open Sans</option>
+        <option value="Lato">Lato</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Oswald">Oswald</option>
+        <option value="Source Sans Pro">Source Sans Pro</option>
+        <option value="Raleway">Raleway</option>
+        <option value="PT Sans">PT Sans</option>
+        <option value="Ubuntu">Ubuntu</option>
+        <option value="Nunito">Nunito</option>
+        <option value="Poppins">Poppins</option>
+        <option value="Playfair Display">Playfair Display</option>
+        <option value="Merriweather">Merriweather</option>
+        <option value="Crimson Text">Crimson Text</option>
+        <option value="Dancing Script">Dancing Script</option>
+        <option value="Lobster">Lobster</option>
+        <option value="Pacifico">Pacifico</option>
+        <option value="Fira Sans">Fira Sans</option>
+        <option value="Inter">Inter</option>
+        <option value="Work Sans">Work Sans</option>
+      </select>
+    </div>
+
+    <div class="preview" id="preview">
+      <p>
+        This is how your selected font will look like. Choose a font from the
+        dropdown above to see the preview.
+      </p>
+    </div>
+
+    <div class="buttons">
+      <button class="apply-btn" id="applyFont">Apply Font</button>
+      <button class="reset-btn" id="resetFont">Reset</button>
+    </div>
+
+    <div class="status" id="status">Select a font and click Apply</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
